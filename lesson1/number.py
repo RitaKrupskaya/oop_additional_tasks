@@ -13,19 +13,23 @@
 """
 
 class Number:
-
+    value = int
+    x = int
     def __init__(self, value):
-        ...
+        self.value = value
 
-    def ...(self):
-        ...
+    def get(self):
+        return self.value
 
-    def ...:
-        ...
+    def add(self, x):
+        self.x = x
+        self.value += self.x
+        return self.value
 
-    def ...:
-        ...
-
+    def substract(self, x):
+        self.x = x 
+        self.value -= self.x
+        return self.value
 
 # код для проверки 
 n = Number(7)
