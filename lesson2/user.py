@@ -25,6 +25,11 @@ class User:
         self.new_password = new_password
         return self.new_password
     
+    def login(self, password):
+      if self.password == password:
+        return True
+      else:
+        return False
 
 # код для проверки 
 user1 = User("Alice", "qwerty")
