@@ -10,9 +10,28 @@
 """
 
 
-class Person:
-    pass
+from datetime import datetime 
 
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def display(self):
+        print(f'Это - {self.name}, ему {self.age} лет')
+
+    @classmethod
+    def from_birth_year(cls, name, birth_year):
+        age = datetime.now().year - birth_year
+        return cls(name, age)
+    
+    @staticmethod
+    def is_adult(age):
+        if age < 18:
+            return False
+        else:
+            return True
+        
 
 # код для проверки 
 person1 = Person("John", 28)
@@ -23,3 +42,5 @@ person2.display()  # Mike is 26 years old
 
 print(Person.is_adult(20))  # True
 print(Person.is_adult(15))  # False
+
+
