@@ -14,8 +14,17 @@
 
 
 class User:
-    pass
-
+    def __init__(self, name, password):
+        self.name = name
+        self.password = password
+    @property
+    def name(self):
+        return self.name
+    @password.setter
+    def password(self, new_password):
+        self.new_password = new_password
+        return self.new_password
+    
 
 # код для проверки 
 user1 = User("Alice", "qwerty")
