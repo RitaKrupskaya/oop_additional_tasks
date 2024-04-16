@@ -8,7 +8,14 @@
 
 
 class Logger:
-    pass
+    def __init__(self, filename, mode='w'):
+        self.filename = filename
+        self.mode = mode
+
+    def __call__(self, message):
+        self.message = message
+        return self.message
+        
 
 
 # код для проверки 
